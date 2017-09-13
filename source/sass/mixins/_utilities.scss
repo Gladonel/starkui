@@ -1,0 +1,960 @@
+.size {
+    &-11 {
+        @include font-size(11);
+    }
+    &-12 {
+        @include font-size(12);
+    }
+    &-13 {
+        @include font-size(13);
+    }
+    &-14 {
+        @include font-size(14);
+    }
+    &-15 {
+        @include font-size(15);
+    }
+    &-16 {
+        @include font-size(16);
+    }
+    &-17 {
+        @include font-size(17);
+    }
+    &-18 {
+        @include font-size(18);
+    }
+    &-19 {
+        @include font-size(19);
+    }
+    &-20 {
+        @include font-size(20);
+    }
+    &-25 {
+        @include font-size(25);
+    }
+    &-30 {
+        @include font-size(30);
+    }
+    &-40 {
+        @include font-size(40);
+    }
+    &-50 {
+        @include font-size(50);
+    }
+    &-60 {
+        @include font-size(60);
+    }
+}
+
+.weight {
+    &-300 {
+        @include weight(300);
+    }
+    &-400 {
+        @include weight(400);
+    }
+    &-500 {
+        @include weight(500);
+    }
+    &-600 {
+        @include weight(600);
+    }
+    &-700 {
+        @include weight(700);
+    }
+    &-800 {
+        @include weight(800);
+    }
+}
+
+.width {
+    &-10 {
+        @include width(10px);
+    }
+    &-20 {
+        @include width(20px);
+    }
+    &-30 {
+        @include width(30px);
+    }
+    &-40 {
+        @include width(40px);
+    }
+    &-50 {
+        @include width(50px);
+    }
+    &-80 {
+        @include width(80px);
+    }
+    &-100 {
+        @include width(100px);
+    }
+    &-150 {
+        @include width(150px);
+    }
+    &-180 {
+        @include width(180px);
+    }
+    &-200 {
+        @include width(200px);
+    }
+    &-220 {
+        @include width(220px);
+    }
+    &-250 {
+        @include width(250px);
+    }
+    &-280 {
+        @include width(280px);
+    }
+    &-300 {
+        @include width(300px);
+    }
+    &-350 {
+        @include width(350px);
+    }
+    &-400 {
+        @include width(400px);
+    }
+    &-450 {
+        @include width(450px);
+    }
+    &-500 {
+        @include width(500px);
+    }
+    &-550 {
+        @include width(550px);
+    }
+    &-600 {
+        @include width(600px);
+    }
+    &-650 {
+        @include width(650px);
+    }
+}
+
+.height {
+    &-10 {
+        @include height(10px);
+    }
+    &-20 {
+        @include height(20px);
+    }
+    &-30 {
+        @include height(30px);
+    }
+    &-40 {
+        @include height(40px);
+    }
+    &-50 {
+        @include height(50px);
+    }
+    &-55 {
+        @include height(55px);
+    }
+    &-100 {
+        @include height(100px);
+    }
+    &-150 {
+        @include height(150px);
+    }
+    &-200 {
+        @include height(200px);
+    }
+    &-250 {
+        @include height(250px);
+    }
+    &-300 {
+        @include height(300px);
+    }
+    &-350 {
+        @include height(350px);
+    }
+    &-400 {
+        @include height(400px);
+    }
+    &-450 {
+        @include height(450px);
+    }
+    &-500 {
+        @include height(500px);
+    }
+    &-550 {
+        @include height(550px);
+    }
+    &-600 {
+        @include height(600px);
+    }
+    &-650 {
+        @include height(650px);
+    }
+}
+
+.padding {
+    &-3 {
+        @include padding(all, 3px);
+    }
+    &-5 {
+        @include padding(all, 5px);
+    }
+    &-6 {
+        @include padding(all, 6px);
+    }
+    &-8 {
+        @include padding(all, 8px);
+    }
+    &-10 {
+        @include padding(all, 10px);
+    }
+    &-15 {
+        @include padding(all, 15px);
+    }
+    &-20 {
+        @include padding(all, 20px);
+    }
+    &-30 {
+        @include padding(all, 30px);
+    }
+    &-40 {
+        @include padding(all, 40px);
+    }
+    &-top {
+        &-3 {
+            @include padding(top, 3px);
+        }
+        &-5 {
+            @include padding(top, 5px);
+        }
+        &-10 {
+            @include padding(top, 10px);
+        }
+        &-15 {
+            @include padding(top, 15px);
+        }
+        &-20 {
+            @include padding(top, 20px);
+        }
+        &-25 {
+            @include padding(top, 25px);
+        }
+        &-30 {
+            @include padding(top, 30px);
+        }
+        &-40 {
+            @include padding(top, 40px);
+        }
+    }
+    &-right {
+        &-5 {
+            @include padding(right, 5px);
+        }
+        &-10 {
+            @include padding(right, 10px);
+        }
+        &-15 {
+            @include padding(right, 15px);
+        }
+        &-20 {
+            @include padding(right, 20px);
+        }
+        &-25 {
+            @include padding(right, 25px);
+        }
+        &-30 {
+            @include padding(right, 30px);
+        }
+        &-40 {
+            @include padding(right, 40px);
+        }
+    }
+    &-bottom {
+        &-5 {
+            @include padding(bottom, 5px);
+        }
+        &-10 {
+            @include padding(bottom, 10px);
+        }
+        &-15 {
+            @include padding(bottom, 15px);
+        }
+        &-20 {
+            @include padding(bottom, 20px);
+        }
+        &-25 {
+            @include padding(bottom, 25px);
+        }
+        &-30 {
+            @include padding(bottom, 30px);
+        }
+        &-40 {
+            @include padding(bottom, 40px);
+        }
+    }
+    &-left {
+        &-5 {
+            @include padding(left, 5px);
+        }
+        &-10 {
+            @include padding(left, 10px);
+        }
+        &-15 {
+            @include padding(left, 15px);
+        }
+        &-20 {
+            @include padding(left, 20px);
+        }
+        &-25 {
+            @include padding(left, 25px);
+        }
+        &-30 {
+            @include padding(left, 30px);
+        }
+        &-40 {
+            @include padding(left, 40px);
+        }
+    }
+}
+
+.nopadding {
+    @include padding(all, 0);
+    &-top {
+        @include padding(top, 0);
+    }
+    &-right {
+        @include padding(right, 0);
+    }
+    &-bottom {
+        @include padding(bottom, 0);
+    }
+    &-left {
+        @include padding(left, 0);
+    }
+}
+
+.margin {
+    &-3 {
+        @include margin(all, 3px);
+    }
+    &-5 {
+        @include margin(all, 5px);
+    }
+    &-6 {
+        @include margin(all, 6px);
+    }
+    &-8 {
+        @include margin(all, 8px);
+    }
+    &-10 {
+        @include margin(all, 10px);
+    }
+    &-15 {
+        @include margin(all, 15px);
+    }
+    &-20 {
+        @include margin(all, 20px);
+    }
+    &-30 {
+        @include margin(all, 30px);
+    }
+    &-40 {
+        @include margin(all, 40px);
+    }
+    &-top {
+        &-5 {
+            @include margin(top, 5px);
+        }
+        &-10 {
+            @include margin(top, 10px);
+        }
+        &-15 {
+            @include margin(top, 15px);
+        }
+        &-20 {
+            @include margin(top, 20px);
+        }
+        &-25 {
+            @include margin(top, 25px);
+        }
+        &-30 {
+            @include margin(top, 30px);
+        }
+        &-40 {
+            @include margin(top, 40px);
+        }
+    }
+    &-right {
+        &-5 {
+            @include margin(right, 5px);
+        }
+        &-10 {
+            @include margin(right, 10px);
+        }
+        &-15 {
+            @include margin(right, 15px);
+        }
+        &-20 {
+            @include margin(right, 20px);
+        }
+        &-25 {
+            @include margin(right, 25px);
+        }
+        &-30 {
+            @include margin(right, 30px);
+        }
+        &-40 {
+            @include margin(right, 40px);
+        }
+    }
+    &-bottom {
+        &-5 {
+            @include margin(bottom, 5px);
+        }
+        &-7 {
+            @include margin(bottom, 7px);
+        }
+        &-10 {
+            @include margin(bottom, 10px);
+        }
+        &-15 {
+            @include margin(bottom, 15px);
+        }
+        &-20 {
+            @include margin(bottom, 20px);
+        }
+        &-25 {
+            @include margin(bottom, 25px);
+        }
+        &-30 {
+            @include margin(bottom, 30px);
+        }
+        &-40 {
+            @include margin(bottom, 40px);
+        }
+    }
+    &-left {
+        &-5 {
+            @include margin(left, 5px);
+        }
+        &-10 {
+            @include margin(left, 10px);
+        }
+        &-15 {
+            @include margin(left, 15px);
+        }
+        &-20 {
+            @include margin(left, 20px);
+        }
+        &-25 {
+            @include margin(left, 25px);
+        }
+        &-30 {
+            @include margin(left, 30px);
+        }
+        &-40 {
+            @include margin(left, 40px);
+        }
+    }
+}
+
+.nomargin {
+    @include margin(all, 0);
+    &-top {
+        @include margin(top, 0);
+    }
+    &-right {
+        @include margin(right, 0);
+    }
+    &-bottom {
+        @include margin(bottom, 0);
+    }
+    &-left {
+        @include margin(left, 0);
+    }
+}
+
+.margin-right-md {
+    @include screen('desktop') {
+        margin-right: 20px;
+    }
+    @include screen('tablet') {
+        margin-right: 10px;
+    }
+}
+
+.line-height {
+    &-10 {
+        @include line-height(10px);
+    }
+    &-20 {
+        @include line-height(20px);
+    }
+    &-30 {
+        @include line-height(30px);
+    }
+    &-40 {
+        @include line-height(40px);
+    }
+    &-50 {
+        @include line-height(50px);
+    }
+    &-60 {
+        @include line-height(60px);
+    }
+    &-70 {
+        @include line-height(70px);
+    }
+    &-80 {
+        @include line-height(80px);
+    }
+    &-90 {
+        @include line-height(90px);
+    }
+    &-100 {
+        @include line-height(100px);
+    }
+}
+
+.noborder {
+    border: 0 !important;
+}
+
+.noborder-left {
+    border-left: 0 !important;
+}
+
+.noborder-right {
+    border-right: 0 !important;
+}
+
+.noborder-top {
+    border-top: 0 !important;
+}
+
+.noborder-bottom {
+    border-bottom: 0 !important;
+}
+
+.nobg {
+    background: transparent;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.noradius {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.font-style-normal {
+    font-style: normal;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
+}
+
+.block {
+    display: block !important;
+}
+
+.block-inline {
+    display: inline-block !important;
+}
+
+.fullwidth {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.halfwidth {
+    width: 50% !important;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.noshadow {
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.nofloat {
+    float: none !important;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 99;
+}
+
+.display-table-cell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.txt-no-decoration {
+    text-decoration: none !important;
+}
+
+.softhide {
+    display: none;
+}
+
+img.pull-left {
+    margin: 0 20px 10px 0;
+}
+
+img.pull-right {
+    margin: 0 0 10px 20px;
+}
+
+ul>li>i {
+    margin-right: 10px;
+}
+
+.no-text-underline,
+.no-text-decoration {
+    text-decoration: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.btn>i {
+    padding-right: 6px;
+}
+
+.nortl {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+.event-filtered {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.event-filtered.active {
+    text-decoration: none!important;
+    color: #333!important;
+}
+
+
+/* borders */
+
+.border-top-1 {
+    border-top: 1px solid #ddd;
+}
+
+.border-top-2 {
+    border-top: 2px solid #ddd;
+}
+
+.border-top-3 {
+    border-top: 3px solid #ddd;
+}
+
+.border-bottom-1 {
+    border-bottom: 1px solid #ddd;
+}
+
+.border-bottom-2 {
+    border-bottom: 2px solid #ddd;
+}
+
+.border-bottom-3 {
+    border-bottom: 3px solid #ddd;
+}
+
+.border-right-1 {
+    border-right: 1px solid #ddd;
+}
+
+.border-error {
+    border: 1px solid red;
+}
+
+.border-bottom-dashed:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -6px;
+    border-bottom: 1px dashed #999;
+}
+
+.border-bottom-dotted:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -6px;
+    border-bottom: 1px dotted #999;
+}
+
+
+/* break words */
+
+.break-word {
+    white-space: pre;
+    /* CSS 2.0 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3.0 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla */
+    white-space: -hp-pre-wrap;
+    /* HP Printers */
+    word-wrap: break-word;
+    /* IE 5+ */
+}
+
+
+/* No Tramsition */
+
+.no-transition {
+    -webkit-transition: all 0s !important;
+    -moz-transition: all 0s !important;
+    -o-transition: all 0s !important;
+    transition: all 0s !important;
+}
+
+
+/* greyscale */
+
+.grayscale-hover-color,
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.grayscale-hover-color:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: color;
+}
+
+
+/* ellipsis */
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* no selectrion */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* absolute/fixed position */
+
+.top-left {
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: auto;
+}
+
+.top-right {
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 0;
+}
+
+.bottom-left {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+}
+
+.bottom-right {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.top-center {
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: auto;
+}
+
+.bottom-center {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: auto;
+}
+
+.position-bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.position-top {
+    top: 0;
+    bottom: auto;
+}
+
+
+/* opacity */
+
+.opacity {
+    &-0 {
+        @include opacity(0);
+    }
+    &-1 {
+        @include opacity(1);
+    }
+    &-2 {
+        @include opacity(2);
+    }
+    &-3 {
+        @include opacity(3);
+    }
+    &-4 {
+        @include opacity(4);
+    }
+    &-5 {
+        @include opacity(5);
+    }
+    &-6 {
+        @include opacity(6);
+    }
+    &-7 {
+        @include opacity(7);
+    }
+    &-8 {
+        @include opacity(8);
+    }
+    &-9 {
+        @include opacity(9);
+    }
+    &-10 {
+        @include opacity(10);
+    }
+}
+
+
+/* radius */
+
+.radius {
+    &-0 {
+        @include border-radius(0);
+    }
+    &-3 {
+        @include border-radius(3px);
+    }
+    &-4 {
+        @include border-radius(4px);
+    }
+    &-5 {
+        @include border-radius(5px);
+    }
+    &-6 {
+        @include border-radius(6px);
+    }
+    &-7 {
+        @include border-radius(7px);
+    }
+    &-8 {
+        @include border-radius(8px);
+    }
+}
+
+.vresize {
+    resize: vertical;
+}

@@ -1,0 +1,65 @@
+/*========================================================
+================== IMPORT DEPENDENCIES ===================
+========================================================*/
+
+@import 'bootstrap/_bootstrap';
+@import 'font-awesome/font-awesome';
+
+/*========================================================
+==================== CUSTOM VARIABLES ====================
+========================================================*/
+
+$body-bg: #000;
+$text-color: #fff;
+
+/* PRIMARY */
+
+$blaze-orange: #FA6900;
+$orange-red: #FD3827;
+$metro-blue: #00B4FF;
+$turquoise-blue: #69D2E7;
+$lover-gray: #515151;
+$dark: #2f353b;
+
+/* SECONDARY */
+
+$jaffa: #F38630;
+$beach-storm: #E0E4CC;
+$flamingo: #EF4836;
+$lemon: #FEE012;
+$strawvery: #FF0033;
+$rounge: #FF6600;
+$heart-gold: #FBB829;
+$hot-pink: #FF0066;
+$chrismas-blue: #2A8FBD;
+$groovy-green: #31D877;
+$jade: #00CC6A;
+
+/*========================================================
+====================== CUSTOM STYLES =====================
+========================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500');
+@import 'mixins/prefix';
+@import 'mixins/screens';
+@import 'mixins/outline';
+@import 'mixins/solid';
+@import 'mixins/border-radius';
+@import 'mixins/font-faces';
+@import 'mixins/font-size';
+@import 'mixins/height';
+@import 'mixins/line-height';
+@import 'mixins/margin';
+@import 'mixins/opacity';
+@import 'mixins/padding';
+@import 'mixins/weight';
+@import 'mixins/width';
+@import 'mixins/utilities';
+@import 'custom';
+@import 'layout/header';
+
+/*========================================================
+================ IMPORT RESPONSIVE STYLES ================
+========================================================*/
+
+@import 'responsive';

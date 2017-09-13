@@ -1,0 +1,13 @@
+@mixin margin($direction, $margin) {
+	@if $direction == top {
+		margin-top: $margin !important;
+	} @else if $direction == right {
+		margin-right: $margin !important;
+	} @else if $direction == bottom {
+		margin-bottom: $margin !important;
+	} @else if $direction == left {
+		margin-left: $margin !important;
+	} @else {
+		margin: $margin !important;
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mysite",
+  "description": "Website Starterkit with Bower and Gulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_components",
+    "source",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery.lazyload": "^1.9.7",
+    "smoothscroll": "^0.3.5",
+    "jquery-countTo": "^1.2.0",
+    "jquery_appear": "^0.3.6",
+    "wow": "1.1.2"
+  },
+  "overrides": {},
+  "authors": [
+    "Hai Vu Minh <haivm3686@gmail.com>"
+  ],
+  "main": "gulpfile.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "ISC",
+  "homepage": "http://lukaslamm.de",
+  "private": true
+}
