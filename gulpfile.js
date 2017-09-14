@@ -1,100 +1,71 @@
-var gulp = require('gulp'),
-    del = require('del'),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    strip = require('gulp-strip-comments'),
-    sourcemaps = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create(),
-    uglify = require('gulp-uglify');
+//
+// All compiling task minifys all files
 
-var config = {
-    sassPath: 'source/sass',
-    bowerDir: 'vendor/bower_components'
-}
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const maps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
 
-gulp.task("copyfiles", function() {
-
-    // Files from vendor/bower_components, where you need them
-    // Copy jQuery
-    gulp.src("vendor/bower_components/jquery/dist/jquery.js")
-        .pipe(gulp.dest("source/js/"));
-
-    // Copy Bootstrap
-    gulp.src("vendor/bower_components/bootstrap-sass/assets/stylesheets/**")
-        .pipe(gulp.dest("source/sass/bootstrap"));
-    gulp.src("vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js")
-        .pipe(gulp.dest("source/js/"));
-    gulp.src("vendor/bower_components/bootstrap-sass/assets/fonts/**")
-        .pipe(gulp.dest("public/fonts"));
-
-    // Copy Fontawesome
-    gulp.src("vendor/bower_components/font-awesome/scss/**")
-        .pipe(gulp.dest("source/sass/font-awesome"));
-    gulp.src("vendor/bower_components/font-awesome/fonts/**")
-        .pipe(gulp.dest("public/fonts"));
+// Compile Bootstrap 4 Sass Files To CSS Minified Directory
+gulp.task('compile-bs-sass', function() {
+    return gulp.src("./scss/boostrap-scss/bootstrap.scss")
+        .pipe(maps.init())
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename('boostrap.min.css'))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('./css'));
 });
 
-gulp.task('clean', function(cb) {
-    del([
-        'source/css/**/*',
-        'source/js/**/*',
-        'source/sass/**/*',
-        '!source/sass/*.scss',
-        '!source/sass/mixins/*.scss',
-        '!source/sass/components/*.scss'
-    ], cb);
+// Compile Custom Sass Files To CSS Minified Directory
+gulp.task('compile-custom-sass', function() {
+    return gulp.src("./scss/custom-scss/main.scss")
+        .pipe(maps.init())
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename('main.min.css'))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('./css'));
 });
 
-
-gulp.task('scripts', function() {
-
-    // Merge scripts here
-    // App
-    gulp.src([
-            'source/js/jquery.js',
-            'source/js/bootstrap.js'
+// Concats Boostrap 4, jQuery, and Tether ALREADY Javascript Files
+gulp.task('concat-js-script', function() {
+    return gulp.src([
+            './js/jquery-3.1.1.slim.min.js',
+            './js/tether.min.js',
+            './js/bootstrap.min.js'
         ])
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest('public/js'))
-        .pipe(rename('app.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('public/js'));
+        .pipe(concat('bootstrap-4-bundle.min.js'))
+        .pipe(gulp.dest('./js'));
 });
 
-gulp.task('serve', ['sass'], function() {
+// Transpile ES6 JS into plain javascript, 
+// you can still use regular javascript and just switch it out in index.html script src
+gulp.task('transpile-compile-es6', () => {
+    return gulp.src('./js/index.js')
+        .pipe(babel({ presets: ['es2015'] }))
+        .pipe(uglify())
+        .pipe(rename('index.min.js'))
+        .pipe(gulp.dest('./js/es2015'));
+});
+
+
+// If you add a new file to either bootstrap 4 or custom dir,
+// run compile-boostrap OR custom-sass first then this task
+gulp.task('watchFile', ['compile-bs-sass', 'compile-custom-sass'], function() {
     browserSync.init({
-        server: "./public",
-        index: "guide.html"
+        server: "./",
+        index: "index.html"
     });
 
-    gulp.watch(["source/sass/*.scss", "source/sass/*/*.scss"], ["sass"]);
-    gulp.watch(['public/*.html']).on('change', browserSync.reload);
+    gulp.watch('./scss/boostrap-scss/**.*', ['compile-bs-sass']).on('change', browserSync.reload);
+    gulp.watch('./scss/custom-scss/**.*', ['compile-custom-sass']).on('change', browserSync.reload);
+    gulp.watch('./js/index.js', ['transpile-compile-es6']).on('change', browserSync.reload);
+    gulp.watch(['./*.html']).on('change', browserSync.reload);
 });
 
-gulp.task('sass', function() {
-    return gulp.src('source/sass/style.scss')
-        .pipe(sourcemaps.init())
-        .pipe(autoprefixer("last 10 versions"))
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/css'))
-        .pipe(browserSync.reload({ stream: true }));
-});
+gulp.task('serve', ['watchFile']);
 
-gulp.task('css', function() {
-
-    // Run css concat or minify here
-
-});
-
-
-gulp.task('watch', function() {
-    gulp.watch([
-        'source/sass/*.scss'
-    ], ['sass']);
-
-});
-
-gulp.task('default', ['scripts', 'sass', 'css', 'serve']);
+gulp.task('default', ['serve']);

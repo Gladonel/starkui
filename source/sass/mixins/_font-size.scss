@@ -1,8 +1,0 @@
-// Usage
-// @include font-size(14px)
-@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.5) {
-  font-size: ($sizeValue * 1) + px !important;
-  line-height: ($line * 1) + px;
-  font-size: ($sizeValue / 10) + rem !important;
-  line-height: ($line / 10) + rem;
-}

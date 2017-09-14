@@ -1,8 +1,0 @@
-@mixin outline($color) {
-    border-color: $color;
-    color: $color;
-    &:hover {
-        color: #fff;
-        background-color: $color;
-    }
-}

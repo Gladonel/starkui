@@ -1,6 +1,3 @@
-*.sublime-project
-*.sublime-workspace
-Thumbs.db
-
-node_modules/
-vendor/
+/node_modules
+/config/src/scss/bootstrap-scss-alpha-4
+.DS_Store
